@@ -1,0 +1,205 @@
+@use "variaveis";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: variaveis.$BackgroundColor;
+}
+
+.event-container {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 600px;
+    background-image: url(../images/Keroppi-background.png);
+    background-size: 98%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &-title {
+        font-family: variaveis.$FonteTitulo;
+        font-weight: 500;
+        font-size: 60px;
+        color: variaveis.$CorPrimaria;
+    }
+
+    &-subtitle {
+        margin-top: 24px;
+        font-size: 24px;
+        font-weight: 400;
+        color: variaveis.$CorTexto;
+    }
+
+    &-time {
+        padding: 8px;
+        border-radius: 15px;
+        background-color: variaveis.$CorSecundaria;
+        color: variaveis.$CorTerciaria;
+        display: flex;
+        flex-direction: row;
+        font-weight: 300;
+        margin: 52px 0px;
+        font-size: 48px;
+
+        &-p {
+            margin-right: 9px;
+            margin-left: 9px;
+        }
+    }
+}
+
+.divisor {
+    border-bottom: 10px dotted variaveis.$CorSecundaria;
+    width: 90%;
+    height: 1px;
+
+    &-container {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.pix {
+    display: flex;
+    justify-content: space-around;
+    margin: 60px 0px;
+
+
+    &-container {
+        display: flex;
+        width: 90%;
+        justify-content: space-around;
+
+        &-img {
+            width: 320px;
+        }
+    }
+
+    &-img {
+        width: 100%;
+    }
+
+    &-text {
+        padding: 25px;
+        background-color: variaveis.$CorSecundaria;
+        width: 40%;
+        align-content: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        margin-top: 105px;
+
+        &-paragraph {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 90%;
+            color: variaveis.$CorTerciaria;
+        }
+
+        &-title {
+            font-family: variaveis.$FonteTitulo;
+            color: variaveis.$CorTerciaria;
+            font-size: 48px;
+            font-weight: 400;
+            margin-bottom: 25px;
+        }
+    }
+}
+
+
+.paragraph {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+@media (max-width: 1200px) {
+    
+    .pix {
+    
+        &-container {
+            justify-content: center;
+            flex-direction: column-reverse;
+            align-items: center;
+
+            &-img {
+                width: 60%;
+            }
+        }
+    
+        &-text {
+            width: 60%;
+            margin-top: 25px;
+            margin-bottom: 50px;
+    
+            &-title {
+                font-size: 64px;
+            }
+        }
+    }
+
+    .paragraph {
+        font-size: 22px;
+    }
+
+    .event-container {
+    background-position: bottom;
+    background-size: 90%;
+    }
+}
+
+@media (max-width: 750px) {
+
+    .event-container{
+        height: auto;
+
+        &-title {
+            margin: 0px 8px;
+            margin-top: 32px;
+            font-size: 50px;
+            text-align: center;
+        }
+
+        &-subtitle {
+            font-size: 18px;
+            text-align: center;
+        }
+
+        &-time {
+            font-size: 24px;
+            margin-top: 24px;
+            margin-bottom: 80px;
+        }
+    }
+
+    .pix {
+
+        &-container {
+
+            &-img {
+                width: 85%;
+            }
+        }
+
+        &-text {
+            width: 80%;
+
+            &-title {
+                font-size: 42px;
+            }
+        }
+
+        .paragraph {
+            font-size: 16px;
+        }
+    }
+}
